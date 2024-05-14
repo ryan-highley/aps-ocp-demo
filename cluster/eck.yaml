@@ -14,14 +14,15 @@ spec:
   sourceNamespace: openshift-marketplace
   startingCSV: elasticsearch-eck-operator-certified.v2.12.1
 ---
-apiVersion: project.openshift.io/v1
-kind: Project
+apiVersion: v1
+kind: Namespace
 metadata:
   name: elastic
   labels:
     kubernetes.io/metadata.name: elastic
+    openshift.io/cluster-monitoring: "true"
   annotations:
-    openshift.io/description: 'APS OCP Demo of Elastic Cloud on Kubernetes'
+    openshift.io/description: APS OCP Demo of Elastic Cloud on Kubernetes
     openshift.io/display-name: Demo ELK
 spec:
   finalizers:
@@ -402,34 +403,3 @@ roleRef:
   name: filebeat
   apiGroup: rbac.authorization.k8s.io
 ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: kibana-es-http
-#   namespace: elastic
-# spec: {}
-# ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   # labels:
-#   #   common.k8s.elastic.co/type: elasticsearch
-#   #   elasticsearch.k8s.elastic.co/cluster-name: elasticsearch
-#   name: elasticsearch-es-http
-#   namespace: elastic
-# spec: {}
-# spec:
-#   internalTrafficPolicy: Cluster
-#   ipFamilies:
-#   - IPv4
-#   ipFamilyPolicy: SingleStack
-#   ports:
-#   - name: https
-#     port: 9200
-#     protocol: TCP
-#     targetPort: 9200
-#   selector:
-#     common.k8s.elastic.co/type: elasticsearch
-#     elasticsearch.k8s.elastic.co/cluster-name: elasticsearch
-#   sessionAffinity: None
-#   type: ClusterIP
