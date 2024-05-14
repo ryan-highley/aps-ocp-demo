@@ -30,6 +30,16 @@ items:
     name: red-hat-camel-k
     source: redhat-operators
     sourceNamespace: openshift-marketplace
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    labels:
+      kubernetes.io/metadata.name: openshift-serverless
+      openshift.io/cluster-monitoring: "true"
+    name: openshift-serverless
+  spec:
+    finalizers:
+    - kubernetes
 - apiVersion: operators.coreos.com/v1alpha1
   kind: Subscription
   metadata:
