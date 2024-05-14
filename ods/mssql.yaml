@@ -14,6 +14,15 @@ spec:
     - kubernetes
 ---
 apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql
+  namespace: ods
+type: Opaque
+data:
+  MSSQL_SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ=
+---
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mssql-data
