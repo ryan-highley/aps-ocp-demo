@@ -34,7 +34,7 @@ metadata:
   name: elasticsearch
   namespace: elastic
 spec:
-  version: 8.12.1
+  version: 8.13.4
   nodeSets:
   - name: default
     count: 1
@@ -60,7 +60,7 @@ metadata:
   name: kibana
   namespace: elastic
 spec:
-  version: 8.12.1
+  version: 8.13.4
   count: 1
   elasticsearchRef:
     name: "elasticsearch"
@@ -93,7 +93,7 @@ spec:
 #   namespace: elastic
 # spec:
 #   type: metricbeat
-#   version: 8.12.1
+#   version: 8.13.4
 #   elasticsearchRef:
 #     name: elasticsearch
 #   kibanaRef:
@@ -312,7 +312,7 @@ roleRef:
 #   namespace: elastic
 # spec:
 #   type: filebeat
-#   version: 8.12.1
+#   version: 8.13.4
 #   elasticsearchRef:
 #     name: elasticsearch
 #   kibanaRef:
