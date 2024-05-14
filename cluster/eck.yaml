@@ -51,7 +51,7 @@ spec:
     insecureEdgeTerminationPolicy: Redirect
   to:
     kind: Service
-    name: elasticsearch-sample-es-http
+    name: elasticsearch-es-http
 ---
 apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
@@ -83,7 +83,7 @@ spec:
     insecureEdgeTerminationPolicy: Redirect
   to:
     kind: Service
-    name: kibana-sample-kb-http
+    name: kibana-kb-http
 ---
 apiVersion: beat.k8s.elastic.co/v1beta1
 kind: Beat
