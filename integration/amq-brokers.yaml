@@ -1,0 +1,25 @@
+---
+apiVersion: broker.amq.io/v1beta1
+kind: ActiveMQArtemis
+metadata:
+  name: aps-ocp-demo
+  namespace: integration-demo
+spec:
+  acceptors:
+  - name: artemis
+    port: 61616
+    protocols: CORE,AMQP,MQTT
+  adminPassword: amq
+  adminUser: amq
+  console:
+    expose: true
+  deploymentPlan:
+    image: placeholder
+    jolokiaAgentEnabled: true
+    journalType: nio
+    managementRBACEnabled: true
+    messageMigration: false
+    persistenceEnabled: true
+    requireLogin: false
+    size: 1
+  version: 7.11.1
