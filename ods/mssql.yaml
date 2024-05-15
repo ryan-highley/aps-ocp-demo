@@ -46,10 +46,9 @@ spec:
        app: mssql
   template:
     metadata:
-      annotations:
-        co.elastic.logs/enabled: true
-        co.elastic.logs/module: mssql
       labels:
+        co.elastic.logs/enabled: "true"
+        co.elastic.logs/module: mssql
         app: mssql
     spec:
       terminationGracePeriodSeconds: 30
