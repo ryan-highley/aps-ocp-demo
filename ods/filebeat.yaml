@@ -16,7 +16,7 @@ spec:
       autodiscover:
         providers:
         - type: kubernetes
-          namespace: ods
+          node: ${NODE_NAME}
           hints:
             enabled: true
             default_config:
@@ -36,3 +36,8 @@ spec:
           securityContext:
             runAsUser: 0
             privileged: true
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
