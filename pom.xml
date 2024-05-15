@@ -31,7 +31,6 @@
         <module>xml-transform</module>
         <module>sftp-payload-in</module>
         <module>soap-payload-in</module>
-        <module>in-soap-payload</module>
     </modules>
 
     <dependencyManagement>
