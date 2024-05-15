@@ -58,11 +58,11 @@ spec:
         image: mcr.microsoft.com/mssql/rhel/server:2019-CU23-rhel-8.7
         resources:
           requests:
-            memory: "1G"
-            cpu: "200m"
+            memory: "2G"
+            cpu: "2000m"
           limits:
-            memory: "1G"
-            cpu: "200m"
+            memory: "2G"
+            cpu: "2000m"
         ports:
         - containerPort: 1433
         securityContext:
