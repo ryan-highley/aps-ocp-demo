@@ -16,7 +16,7 @@ spec:
       autodiscover:
         providers:
         - type: kubernetes
-          node: ${NODE_NAME}
+          namespace: ods
           hints:
             enabled: true
             default_config:
@@ -28,7 +28,6 @@ spec:
     podTemplate:
       spec:
         serviceAccountName: filebeat
-        automountServiceAccountToken: true
         terminationGracePeriodSeconds: 30
         dnsPolicy: ClusterFirstWithHostNet
         hostNetwork: true
@@ -37,8 +36,3 @@ spec:
           securityContext:
             runAsUser: 0
             privileged: true
-          env:
-          - name: NODE_NAME
-            valueFrom:
-              fieldRef:
-                fieldPath: spec.nodeName
