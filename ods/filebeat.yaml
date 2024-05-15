@@ -21,6 +21,9 @@ spec:
             enabled: true
             default_config:
               enabled: false
+              type: container
+              paths:
+                - /var/opt/mssql/logs/errorlog*
     processors:
     - add_cloud_metadata: {}
     - add_host_metadata: {}
