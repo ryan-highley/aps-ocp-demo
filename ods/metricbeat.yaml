@@ -8,8 +8,7 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: metricbeat
-  namespace: ods
+  name: metricbeat-ods
 subjects:
 - kind: ServiceAccount
   name: metricbeat

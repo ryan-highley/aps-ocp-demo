@@ -8,8 +8,7 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: filebeat
-  namespace: ods
+  name: filebeat-ods
 subjects:
 - kind: ServiceAccount
   name: filebeat
