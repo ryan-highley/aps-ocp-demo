@@ -46,6 +46,9 @@ spec:
        app: mssql
   template:
     metadata:
+      annotations:
+        co.elastic.logs/enabled: true
+        co.elastic.logs/module: mssql
       labels:
         app: mssql
     spec:
