@@ -27,10 +27,7 @@
     </properties>
 
     <modules>
-        <module>csv-transform</module>
-        <module>xml-transform</module>
-        <module>sftp-payload-in</module>
-        <module>soap-payload-in</module>
+        <module>demo-weather-interface</module>
     </modules>
 
     <dependencyManagement>
